@@ -16,16 +16,21 @@ asana.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    nameEnglish: {
+    english_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    nameSanskrit: {
+    sanskrit_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
     description: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    img_url: {
+      type: DataTypes.LONGBLOB,
+      // or BLOB if it doesn't work
       allowNull: false,
     },
     // image Model Attributes should be here
