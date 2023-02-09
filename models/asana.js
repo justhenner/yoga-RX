@@ -3,9 +3,7 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class asana extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+
 }
 
 asana.init(
@@ -34,12 +32,8 @@ asana.init(
       allowNull: false,
     },
     // image Model Attributes should be here
-    hooks: {
-      beforeCreate: async (newAsanaData) => {
-        newAsanaData.password = await bcrypt.hash(newAsanaData.password, 10);
-        return newAsanaData;
-      },
-    },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
