@@ -2,13 +2,13 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class userAsana extends Model {
+class asanaInjury extends Model {
   // checkPassword(loginPw) {
   //   return bcrypt.compareSync(loginPw, this.password);
   // }
 }
 
-userAsana.init(
+asanaInjury.init(
   {
     id: {
       type: DataTypes.INTEGER,
