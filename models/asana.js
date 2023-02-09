@@ -28,7 +28,7 @@ asana.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+    // image Model Attributes should be here
   },
   {
     hooks: {
