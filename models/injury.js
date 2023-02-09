@@ -3,12 +3,11 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Injury extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
 
-User.Injury(
+  }
+
+
+Injury.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -24,12 +23,7 @@ User.Injury(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // hooks: {
-    //   beforeCreate: async (newInjuryData) => {
-    //     newUserData.password = await bcrypt.hash(newInjuryData.password, 10);
-    //     return newInjuryData;
-    //   },
-    // },
+
   },
   {
     sequelize,
