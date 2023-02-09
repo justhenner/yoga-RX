@@ -21,15 +21,17 @@ User.Injury(
       allowNull: false,
     },
     description: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-    hooks: {
-      beforeCreate: async (newInjuryData) => {
-        newUserData.password = await bcrypt.hash(newInjuryData.password, 10);
-        return newInjuryData;
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
     },
+    // hooks: {
+    //   beforeCreate: async (newInjuryData) => {
+    //     newUserData.password = await bcrypt.hash(newInjuryData.password, 10);
+    //     return newInjuryData;
+    //   },
+    // },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
