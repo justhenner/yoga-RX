@@ -6,7 +6,7 @@ const User = sequelize.define('User',{id: DataTypes.INTEGER})
 
 class User_Asana extends Model {}
 
-Asana_Focus.init(
+User_Asana.init(
     {
         asana_id:{
             type: DataTypes.INTEGER,

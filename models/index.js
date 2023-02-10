@@ -10,7 +10,7 @@ Asana.belongsToMany(Focus, {
         model: Asana_Focus,
         unique: false
     },
-    as:'focus_for_asana'
+    as:'focuses_for_asana'
 });
 
 Focus.belongsToMany(Asana, {
@@ -18,7 +18,7 @@ Focus.belongsToMany(Asana, {
         model: Asana_Focus,
         unique: false
     },
-    as:'asana_for_focus'
+    as:'asanas_for_focus'
 });
 
 User.belongsToMany(Asana, {
@@ -26,14 +26,14 @@ User.belongsToMany(Asana, {
         model: User_Asana,
         unique: false
     },
-    as:'asana_for_focus'
+    as:'users_for_asana'
 });
 Asana.belongsToMany(User, {
     through:{
         model: User_Asana,
         unique: false
     },
-    as:'asana_for_focus'
+    as:'asanas_for_user'
 });
 
 module.exports = {User, Asana, Focus, Asana_Focus, User_Asana }
