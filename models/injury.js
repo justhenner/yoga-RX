@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+// const bcrypt = require('bcrypt');
+const sequelize = require('../config/config');
 
 class Injury extends Model {
   checkPassword(loginPw) {
@@ -8,7 +8,7 @@ class Injury extends Model {
   }
 }
 
-User.Injury(
+Injury.init(
   {
     id: {
       type: DataTypes.INTEGER,
