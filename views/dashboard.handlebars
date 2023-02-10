@@ -1,0 +1,23 @@
+{{#if favorite.length}}
+<section>
+    <h2>Your Favorites</h2>
+    <ol>
+        {{#each favorite as |favorite|}}
+        <ul>
+            <article class="favorites">
+                <div class ="asana">
+                    {{favorites.name}}
+                </div>
+                <div class="meta">
+                    <strong>Chosen on{{format_date favorite.chosen_on}}</strong>
+                </div>
+                </article>
+                <a> href="/dashboard/edit-favorites/{{favorite.id}}" class="edit-link"> Edit-favorites<a>
+        </ul>
+        {{/each}}
+        </ol>
+    </section>
+
+    <div>
+        <button type="submit"><a href="dashboard/new-favorite" class="create btn">Add New Favorite<a>button>
+    </div>

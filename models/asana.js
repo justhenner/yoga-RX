@@ -34,12 +34,8 @@ Asana.init(
       allowNull: false,
     },
     // image Model Attributes should be here
-    hooks: {
-      beforeCreate: async (newAsanaData) => {
-        newAsanaData.password = await bcrypt.hash(newAsanaData.password, 10);
-        return newAsanaData;
-      },
-    },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
