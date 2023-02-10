@@ -1,0 +1,29 @@
+nav {
+    margin-right: 30%;
+}
+.singIn {
+    position:fixed; 
+    right:80px; 
+    top:20px;
+}
+
+.importance {
+    max-width: 100%;
+    height: auto;
+  }
+    
+.mainText {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+}
+.header {
+        background-image: url("./images/background.png");
+        background-color: #cccccc;
+        font-size: 0%;
+}

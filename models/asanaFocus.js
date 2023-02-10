@@ -2,13 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class userAsana extends Model {
-  // checkPassword(loginPw) {
-  //   return bcrypt.compareSync(loginPw, this.password);
-  // }
+class asanaFocus extends Model {
+
 }
 
-userAsana.init(
+asanaFocus.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -31,12 +29,7 @@ userAsana.init(
       },
     },
   },
-  // hooks: {
-  //   beforeCreate: async (newUserAsanaData) => {
-  //     newUserAsanaData.password = await bcrypt.hash(newUserAsanaData.password, 10);
-  //     return newUserAsanaData;
-  //   },
-  // },
+
   {
   sequelize,
   timestamps: false,
@@ -45,5 +38,3 @@ userAsana.init(
   modelName: 'userAsana',
   }
 );
-
-module.exports = userAsana;

@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS yogaRx_db;
+CREATE DATABASE yogaRx_db;
