@@ -38,5 +38,3 @@ asanaInjury.init(
   modelName: 'userAsana',
   }
 );
-
-module.exports = userAsana;
