@@ -23,7 +23,7 @@
                         {{else}}
                         <a href="/" class="homepage">Homepage</a>
                         <a href="/login">Login</a>
-                        {{if}}
+                        {{/if}}
                     </nav>
                     </header>
                     <main>
@@ -31,7 +31,7 @@
                     </main>
                 </div>
 
-            {{if loggedIn}}
+            {{#if loggedIn}}
             <script src="javascript/logout.js"></script>
             {{/if}}
             
