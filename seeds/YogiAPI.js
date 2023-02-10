@@ -109,7 +109,7 @@
     "sanskrit_name":"Garudasana",
     "english_name":"Eagle",
     "img_url":"https://www.dropbox.com/s/w05qgx7wyxva1y3/eagle.svg?raw=1",
-    // advanced; balancing pose; leg strengthening; shoulder opening
+    // advanced; standing balancing pose; leg strengthening; shoulder opening
     },
     
     {"id":17,
@@ -130,7 +130,7 @@
     "sanskrit_name":"Pincha Mayurasana",
     "english_name":"Forearm Stand",
     "img_url":"https://www.dropbox.com/s/kjlyju4m91qgoi6/forearmstand.svg?raw=1",
-    // advanced; inversion; shoulder opening and strengthening 
+    // advanced; strength inversion; shoulder opening and strengthening 
     },
     
     {"id":20,
