@@ -1,9 +1,9 @@
 {{#if favorite.length}}
 <section>
     <h2>Your Favorites</h2>
-    <ol>
+    <ul>
         {{#each favorite as |favorite|}}
-        <ul>
+        <li>
             <article class="favorites">
                 <div class ="asana">
                     {{favorites.name}}
@@ -13,9 +13,9 @@
                 </div>
                 </article>
                 <a> href="/dashboard/edit-favorites/{{favorite.id}}" class="edit-link"> Edit-favorites<a>
-        </ul>
+        </li>
         {{/each}}
-        </ol>
+        </ul>
     </section>
 
     <div>
