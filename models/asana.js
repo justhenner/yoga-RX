@@ -28,6 +28,10 @@ Asana.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    difficulty_level: {
+      type: DataTypes.VARCHAR(30),
+      allowNull: false,
+    },
     img_url: {
       type: DataTypes.LONGBLOB,
       // or BLOB if it doesn't work
