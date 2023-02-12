@@ -29,10 +29,29 @@ nav {
         font-size: 0%;
 }
 .forms {
-    display: inline-block;
+    /* display: inline-block; */
   border-radius: 1px;
   border-color: black;
   border-style: solid;
   padding: 40px;
   border-radius: 25px;
+  max-width: auto;
+  margin: 50px;
+
+  
+}
+.asanaImage {
+    display: inline;
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 25px;
+    margin: 50px 10px 50px 50px;
+    max-width: 30%;
+}
+.asanaInfo {
+    display: inline;
+    float: right;
+    margin: 50px 50px 50px 10px;
+    max-width: 40%;
 }
