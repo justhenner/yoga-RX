@@ -13,90 +13,109 @@
 
 
 <header class="header ">
-    
-   <img src="./images/logo.png" alt="yoga_man" style="">
-    <a href="signIn.html" class="singIn">Sign in</a> 
+
+    <img src="./images/logo.png" alt="yoga_man" style="">
+    <a href="signIn.html" class="singIn">Sign in</a>
 </header>
 <!-- Navigation -->
 <nav class="navbar is-transparent">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="./images/logo.png" alt="yoga rx logo" width="112" height="28">
-    </a>
-    <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="homeroute">
-        Home
-      </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="focus">
-          Focus
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+            <img src="./images/logo.png" alt="yoga rx logo" width="112" height="28">
         </a>
-        <div class="navbar-dropdown is-boxed">
-          {{#each focus as |focus|}}
-          <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-            {{Focus.name}}
-          </a>
-          {{/each}}
-         <!-- each loop -->
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-      </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="focus">
-            Asana
-          </a>
-          <div class="navbar-dropdown is-boxed">
-            {{#each asana as |asana|}}
-            <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-              {{Asana.name}}
-            </a>
-           <!-- each loop -->
-           {{/each}}
-          </div>
-      </div>
     </div>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          {{#if loggedIn }}
-          <p class="control">
-            <a class="bd-tw-button button" href="signinURL">
-              <span class="icon">
-                <i class="fab fa-twitter"></i>
-              </span>
-              <span>
-                Log out
-              </span>
-            </a> 
-          </p>
-          <p class="control pt-2">
-            <span>Username</span>
-            <!-- insert username -->
-          </p>
-          {{else}}
-          <p class="control">
-            <a class="bd-tw-button button" href="signinURL">
-              <span class="icon">
-                <i class="fab fa-twitter"></i>
-              </span>
-              <span>
-                Login
-              </span>
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/homeroutes">
+                Home
             </a>
-          </p>
-          {{/if}}
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="focus">
+                    Focus
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                    {{#each focus as |focus|}}
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        {{Focus.name}}
+                    </a>
+                    {{/each}}
+                    <!-- each loop -->
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="focus">
+                    Asana
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                    {{#each asana as |asana|}}
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        {{Asana.name}}
+                    </a>
+                    <!-- each loop -->
+                    {{/each}}
+                </div>
+            </div>
+            {{#if loggedIn}}
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="focus">
+                    Favorites
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                    {{#if favorites.length}}
+                    {{#each favorites as |favorites|}}
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        {{Favorites.name}}
+                    </a>
+                    <!-- each loop -->
+                    {{/each}}
+                    {{else}}
+                    <strong>You have no favorites!</strong>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
         </div>
-      </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    {{#if loggedIn }}
+                    <p class="control">
+                        <a class="bd-tw-button button" href="signinURL">
+                            <span class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span>
+                                Log out
+                            </span>
+                        </a>
+                    </p>
+                    <p class="control pt-2">
+                        <span>Username</span>
+                        <!-- insert username -->
+                    </p>
+                    {{else}}
+                    <p class="control">
+                        <a class="bd-tw-button button" href="signinURL">
+                            <span class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span>
+                                Login
+                            </span>
+                        </a>
+                    </p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
 
 
@@ -105,22 +124,18 @@
   <img src="./images/Importance.jpg" alt="importanceOfYoga">
   </div> -->
   <div class="mainText">
-   <h1>The Importance Of Yoga</h1>
-   <p> Mental benefits
-    Aside from the physical benefits, one of the best benefits of yoga is how it helps a person manage mental health. Most importantly, yoga helps anyone deal with stress, which is known to have devastating effects on the body and mind. According to Dr. Nevins, “Stress can reveal itself in many ways, including back or neck pain, sleeping problems, headaches, drug abuse, and an inability to concentrate”. Yoga can be very effective in developing coping skills. This practice helps people to reach a more positive outlook on their life.
-    
-    Heightened Concentration
-    The improved concentration is one of the many benefits of a calm mind. The survivors of modern life know the importance of concentration because they often find themselves juggling numerous tasks. Meditation is one potent practice for sharpening the focus. In meditation, you bring your attention either to the breath, mantra, or any visual every time your mind wanders.
-    
-    Strength & Flexibility
-    The sedentary lifestyle is the begetting of many physical health problems like limited flexibility, low strength, poor posture, stiffness, and many more. The performance of yoga asanas encourages body movement in different directions, assisting in opening that reduces stiffness, increases joint mobility, and releases pent-up emotions leading to strength and flexibility.
-    
-    Greater strength and flexibility are crucial for the healthy maintenance of muscles, tissues, and ligaments.
-    
-    Discipline and Mindfulness in Life
-    By implementing the Yamas and Niyamas written in the Yoga Sutras of Patanjali, you invite more discipline and mindfulness into your living. The five Yamas and Niyamas are the ethical codes of living a virtuous life.
-    
-    To honor these ethics during the span of life means – being mindful in every action, performing acts with compassion, and living life in the present moment.
+   <h1 class="title is-3">The Importance of Yoga</h1>
+   <h2 class="sustitle is-2">A Holistic Practice</h2>
+    <p>A consistent yoga practice paves the way for a strong, flexible, and balanced body and mind. Though physical benefits generally take the forefront, mental health benefits are becoming ever more relevant. Countless health studies have shown how yoga helps to mitigate stress, which reveals itself in numerous ways including back and neck pain, insomnia, migranes, anxiety, and more. The transformative practice of yoga helps practitioners develop coping skills, overcome substance abuse issues, and attain a more positive outlook on life.</p>
+    <br>
+    <h2 class="sustitle is-2">Heightened Concentration</h2>
+    <p>Enhanced concentration is one of the many benefits of a calm mind. Most modern day beings can agree that sustained concentration is ever fleeting. With the constant bombardment of real world and digital alerts the ability to focus without the aid of cognitive enhancing drugs is nearly impossible. Meditation, a potent yogic practice, can aid in sharpening the mind and ultimately building focus. Depending on the  meditation style a practitioner can draw their attention towards the breath or a mantra when the mind wanders.</p>
+    <br>
+    <h2 class="sustitle is-2">Strength & Flexibility</h2>
+    <p>Sedentary lifestyles are leading the way for an aging population that suffers from an array of chronic health issues that stem from limited flexibility, low strength, poor posture, stiffness, and more. The performance of yoga asanas encourages body movements accross all planes of motion, increases joint mobility, and indirectly releases pent-up emotions. Consistently practicing these postures ultimately leads to greater strength and flexibility, which are two crucial elements for healthy muscles, tissues, and ligaments.</p>
+    <br>
+    <h2 class="sustitle is-2">Discipline and Mindfulness in Life</h2> 
+    Moving beyond asana, the spiritual elements of yoga invite greater discipline and mindfulness into daily living. Honoring a series of ethical principals during a practictioners lifespan means being mindful in every action, performing acts with compassion, and living life in the present moment.
     
     </p>
   </div>
