@@ -5,14 +5,14 @@
         {{#each favorite as |favorite|}}
         <li>
             <article class="favorites">
-                <div class ="asana">
-                    {{favorites.name}}
-                </div>
+                <p class ="asana">
+                    <span>{{favorites.name}}</span>
+                </p>
                 <div class="meta">
                     <strong>Chosen on{{format_date favorite.chosen_on}}</strong>
                 </div>
                 </article>
-                <a> href="/dashboard/edit-favorites/{{favorite.id}}" class="edit-link"> Edit-favorites<a>
+                <a> href="/api/asana/{{asana.id}}" class="edit-link"> Edit-favorites<a>
         </li>
         {{/each}}
         </ul>
