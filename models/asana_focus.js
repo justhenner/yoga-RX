@@ -9,10 +9,20 @@ class Asana_Focus extends Model {}
 Asana_Focus.init(
     {
         asana_id:{
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'asana',
+                key: 'id',
+                unique: false
+            },
         },
         focus_id:{
-            type:DataTypes.INTEGER
+            type:DataTypes.INTEGER,
+            references: {
+                model: 'focus',
+                key: 'id',
+                unique: false
+            },
         }
         
         
