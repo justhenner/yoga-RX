@@ -28,3 +28,11 @@ nav {
         background-color: #cccccc;
         font-size: 0%;
 }
+.forms {
+    display: inline-block;
+  border-radius: 1px;
+  border-color: black;
+  border-style: solid;
+  padding: 40px;
+  border-radius: 25px;
+}
