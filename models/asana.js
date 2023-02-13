@@ -20,9 +20,11 @@ Asana.init(
     },
     difficulty_level: {
       type: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     img_url: {
+      type: DataTypes.STRING,
       type: DataTypes.STRING,
       allowNull: false,
     },

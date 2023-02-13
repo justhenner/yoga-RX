@@ -1,12 +1,12 @@
-const { Model, DataTypes } = require('sequelize');
-// const { FOREIGNKEYS } = require('sequelize/types/query-types');
+const { Model, DataTypes } =require('sequelize');
 const sequelize = require('../config/config');
-// const Asana = sequelize.define('Asana',{id: DataTypes.INTEGER})
-// const User = sequelize.define('User',{id: DataTypes.INTEGER})
+
 
 class Favorites extends Model {}
 
-Favorites.init(
+
+
+Favorites.init (
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,7 +15,7 @@ Favorites.init(
             autoIncrement: true
         },
 
-        asana_id:{
+        asana_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'asana',
@@ -23,21 +23,23 @@ Favorites.init(
                 unique: false
             }
         },
-        user_id:{
-            type:DataTypes.INTEGER,
+        user_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'user',
                 key: 'id',
                 unique: false
-            }
-        },
-    },
-    {
+    
+        }
+    }, 
+},
+    { 
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'favorites',
+
     }
 );
 module.exports = Favorites;
