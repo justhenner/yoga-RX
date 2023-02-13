@@ -11,7 +11,6 @@
     <title>yoga rx</title>
 </head>
 
-
 <header class="header ">
 
     <img src="./images/logo.png" alt="yoga_man" style="">
@@ -41,11 +40,10 @@
                 </a>
                 <div class="navbar-dropdown is-boxed">
                     {{#each focus as |focus|}}
-                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                        {{Focus.name}}
+                    <a class="navbar-item" href="/focus/{{focus.id}}">
+                        {{focus.name}}
                     </a>
                     {{/each}}
-                    <!-- each loop -->
                 </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
@@ -54,48 +52,36 @@
                 </a>
                 <div class="navbar-dropdown is-boxed">
                     {{#each asana as |asana|}}
-                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                        {{Asana.name}}
+                    <a class="navbar-item" href="/asana/{{asana.id}}">
+                        {{asana.english_name}}
                     </a>
                     <!-- each loop -->
                     {{/each}}
                 </div>
             </div>
             {{#if loggedIn}}
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="focus">
+            <div class="navbar-item">
+                <a class="navbar-link" href="/dashboards">
                     Favorites
                 </a>
-                <div class="navbar-dropdown is-boxed">
-                    {{#if favorites.length}}
-                    {{#each favorites as |favorites|}}
-                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                        {{Favorites.name}}
-                    </a>
-                    <!-- each loop -->
-                    {{/each}}
-                    {{else}}
-                    <strong>You have no favorites!</strong>
-                    {{/if}}
-                </div>
             </div>
             {{/if}}
         </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="field is-grouped">
-                    {{#if loggedIn }}
-                    <p class="control">
-                        <a class="bd-tw-button button" href="signinURL">
-                            <span class="icon">
-                                <i class="fab fa-twitter"></i>
-                            </span>
-                            <span>
-                                Log out
-                            </span>
-                        </a>
-                    </p>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        {{#if logged in }}
+                        <p class="control">
+                            <a class="bd-tw-button button" href="signinURL">
+                                <span clas="icon">
+                                    <i clas="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Log out
+                                </span>
+                            </a>
+                        </p>
                     <p class="control pt-2">
                         <span>Username</span>
                         <!-- insert username -->
@@ -121,7 +107,6 @@
 <main>
     {{{body}}}
 </main>
-</div>
 
 {{#if loggedIn}}
 <script src="javascript/logout.js"></script>
