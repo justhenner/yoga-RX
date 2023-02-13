@@ -21,24 +21,22 @@ Asana_Focus.init(
                 unique: false
             }
         },
+
         focus_id:{
             type:DataTypes.INTEGER,
             references: {
                 model: 'focus',
                 key: 'id',
                 unique: false
-            }
-        },
-        
+            },
+        }   
     },
-    {   
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'asana_focus'
-    
-    
-    }
+        modelName: 'asana',
+      }
 );
 module.exports = Asana_Focus;

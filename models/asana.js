@@ -1,8 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class Asana extends Model { }
-
+class Asana extends Model {}
 
 Asana.init(
   {
@@ -12,8 +11,8 @@ Asana.init(
       primaryKey: true,
     },
     sanskrit_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     english_name: {
       type: DataTypes.STRING,
@@ -21,9 +20,11 @@ Asana.init(
     },
     difficulty_level: {
       type: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     img_url: {
+      type: DataTypes.STRING,
       type: DataTypes.STRING,
       allowNull: false,
     },

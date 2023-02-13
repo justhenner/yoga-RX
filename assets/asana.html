@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>yoga rx</title>
+</head>
+<body>
+
+<header class="header ">
+
+    <img src="./images/logo.png" alt="yoga_man" style="">
+    <a href="signIn.html" class="singIn">Sign in</a>
+</header>
+<!-- Navigation -->
+<nav class="navbar is-transparent">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+            <img src="./images/logo.png" alt="yoga rx logo" width="112" height="28">
+        </a>
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/homeroutes">
+                Home
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="focus">
+                    Focus
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                    {{#each focus as |focus|}}
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        {{Focus.name}}
+                    </a>
+                    {{/each}}
+                    <!-- each loop -->
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="focus">
+                    Asana
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                    {{#each asana as |asana|}}
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        {{Asana.name}}
+                    </a>
+                    <!-- each loop -->
+                    {{/each}}
+                </div>
+            </div>
+            {{#if loggedIn}}
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="focus">
+                    Favorites
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                    {{#if favorites.length}}
+                    {{#each favorites as |favorites|}}
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        {{Favorites.name}}
+                    </a>
+                    <!-- each loop -->
+                    {{/each}}
+                    {{else}}
+                    <strong>You have no favorites!</strong>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    {{#if loggedIn }}
+                    <p class="control">
+                        <a class="bd-tw-button button" href="signinURL">
+                            <span class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span>
+                                Log out
+                            </span>
+                        </a>
+                    </p>
+                    <p class="control pt-2">
+                        <span>Username</span>
+                        <!-- insert username -->
+                    </p>
+                    {{else}}
+                    <p class="control">
+                        <a class="bd-tw-button button" href="signinURL">
+                            <span class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span>
+                                Login
+                            </span>
+                        </a>
+                    </p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section>
+    <img class="asanaImage" src="https://www.dropbox.com/s/4m64ztxkj8a4dab/boatstraightlegs.svg?raw=1" alt="placeholder">
+   
+    <div class="asanaInfo">
+        <h3 class="title is-3">Asana name | Sanskrit name</h3>
+        <h4 class="subtitle is-4">Focus type</h4>
+        <h5 class="subtitle is-5">strength/stretch</h5>    
+        <h5 class="subtitle is-4">Difficulty level</h5>
+        <h5 class="subtitle is-5">beg/int/adv</h5> 
+        <p>
+            asdl;fkjas;dlkfja;sdkfja;ldkfja;sdkfja;sdfkj
+        </p>   
+    </div>
+</section>
+
+    
+</body>
+</html>

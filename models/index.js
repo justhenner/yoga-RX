@@ -1,6 +1,6 @@
 const User = require('./user');
 const Focus = require('./focus');
-const Asana = require('./user');
+const Asana = require('./asana');
 const Asana_Focus = require('./asana_focus');
 const Favorites = require('./favorites');
 
@@ -24,6 +24,7 @@ Focus.belongsToMany(Asana, {
 User.belongsToMany(Asana, {
     through:{
         model: Favorites,
+        model: Favorites,
         unique: false
     },
     as:'users_for_asana'
@@ -31,9 +32,10 @@ User.belongsToMany(Asana, {
 Asana.belongsToMany(User, {
     through:{
         model: Favorites,
+        model: Favorites,
         unique: false
     },
     as:'asanas_for_user'
 });
 
-module.exports = {User, Asana, Focus, Asana_Focus, Favorites}
+module.exports = {User, Asana, Focus, Asana_Focus, Favorites }
