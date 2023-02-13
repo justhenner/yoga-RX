@@ -29,9 +29,14 @@ Asana_Focus.init(
                 key: 'id',
                 unique: false
             },
-        }
-        
-        
-    }
+        }   
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'asana',
+      }
 );
 module.exports = Asana_Focus;
