@@ -5,127 +5,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css">
-
     <title>yoga rx</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/styles.css">
 </head>
 
+<body>
+    <header class="header ">
 
-<header class="header ">
-
-    <img src="./images/logo.png" alt="yoga_man" style="">
-    <a href="signIn.html" class="singIn">Sign in</a>
-</header>
-<!-- Navigation -->
-<nav class="navbar is-transparent">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-            <img src="./images/logo.png" alt="yoga rx logo" width="112" height="28">
-        </a>
-        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
-    <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="/homeroutes">
-                Home
+        <img src="./image/logo.png" alt="yoga_man" style="">
+        <a href="signIn.html" class="singIn">Sign in</a>
+    </header>
+    <!-- Navigation -->
+    <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="./image/logo.png" alt="yoga rx logo" width="112" height="28">
             </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="focus">
-                    Focus
-                </a>
-                <div class="navbar-dropdown is-boxed">
-                    {{#each focus as |focus|}}
-                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                        {{Focus.name}}
-                    </a>
-                    {{/each}}
-                    <!-- each loop -->
-                </div>
-            </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="focus">
-                    Asana
-                </a>
-                <div class="navbar-dropdown is-boxed">
-                    {{#each asana as |asana|}}
-                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                        {{Asana.name}}
-                    </a>
-                    <!-- each loop -->
-                    {{/each}}
-                </div>
-            </div>
-            {{#if loggedIn}}
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="focus">
-                    Favorites
-                </a>
-                <div class="navbar-dropdown is-boxed">
-                    {{#if favorites.length}}
-                    {{#each favorites as |favorites|}}
-                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                        {{Favorites.name}}
-                    </a>
-                    <!-- each loop -->
-                    {{/each}}
-                    {{else}}
-                    <strong>You have no favorites!</strong>
-                    {{/if}}
-                </div>
-            </div>
-            {{/if}}
-        </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="field is-grouped">
-                    {{#if loggedIn }}
-                    <p class="control">
-                        <a class="bd-tw-button button" href="signinURL">
-                            <span class="icon">
-                                <i class="fab fa-twitter"></i>
-                            </span>
-                            <span>
-                                Log out
-                            </span>
-                        </a>
-                    </p>
-                    <p class="control pt-2">
-                        <span>Username</span>
-                        <!-- insert username -->
-                    </p>
-                    {{else}}
-                    <p class="control">
-                        <a class="bd-tw-button button" href="signinURL">
-                            <span class="icon">
-                                <i class="fab fa-twitter"></i>
-                            </span>
-                            <span>
-                                Login
-                            </span>
-                        </a>
-                    </p>
-                    {{/if}}
-                </div>
+            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
-</nav>
 
-<main>
-    {{{body}}}
-</main>
-</div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/homeroutes">
+                    Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/focus">
+                        Focus
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        {{#each focuses as |focus| }}
+                        <a class="navbar-item" href="/focus/{{focus.id}}">
+                            {{focus.name}}
+                        </a>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/asana">
+                        Asana
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        {{#each asanas as |asana|}}
+                        <a class="navbar-item" href="/asana/{{asana.id}}">
+                            {{asana.english_name}}
+                        </a>
+                        <!-- each loop -->
+                        {{/each}}
+                    </div>
+                </div>
+                {{#if loggedIn}}
+                <div class="navbar-item">
+                    <a class="navbar-link" href="/dashboards">
+                        Favorites
+                    </a>
+                </div>
+                {{/if}}
+            </div>
 
-{{#if loggedIn}}
-<script src="javascript/logout.js"></script>
-{{/if}}
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        {{#if loggedIn }}
+                        <p class="control">
+                            <a class="bd-tw-button button" href="signinURL">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Log out
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control pt-2">
+                            <span>Username</span>
+                            <!-- insert username -->
+                        </p>
+                        {{else}}
+                        <p class="control">
+                            <a class="bd-tw-button button" href="signinURL">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Login
+                                </span>
+                            </a>
+                        </p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    {{#if loggedIn}}
+    <script src="javascript/logout.js"></script>
+    {{/if}}
 
 </body>
 

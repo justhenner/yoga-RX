@@ -2,11 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 // const { FOREIGNKEYS } = require('sequelize/types/query-types');
 const sequelize = require('../config/config');
 // const Asana = sequelize.define('Asana',{id: DataTypes.INTEGER})
-// const Focus = sequelize.define('Focus',{id: DataTypes.INTEGER})
+// const User = sequelize.define('User',{id: DataTypes.INTEGER})
 
-class Asana_Focus extends Model {}
+class Favorites extends Model {}
 
-Asana_Focus.init(
+Favorites.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -23,22 +23,21 @@ Asana_Focus.init(
                 unique: false
             }
         },
-
-        focus_id:{
+        user_id:{
             type:DataTypes.INTEGER,
             references: {
-                model: 'focus',
+                model: 'user',
                 key: 'id',
                 unique: false
             }
-        },  
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'asana_focus',
+        modelName: 'favorites',
     }
 );
-module.exports = Asana_Focus;
+module.exports = Favorites;

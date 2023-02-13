@@ -1,0 +1,30 @@
+{{#each asanas as |asana|}}
+<section class="searchResult">
+    <div class="box boxes">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img class=formImage src="{{asana.img_url}}" alt="{{asana.english_name}}">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>
+                            {{asana.english_name}} |
+                        </strong>
+                        <strong>
+                            {{asana.sanskrit_name}}
+                        </strong>
+                        <br>
+                        <strong>Focus:</strong>
+                        <br>
+                    <p>
+                        {{focus.description}}
+                    </p>
+                </div>
+        </article>
+    </div>
+
+</section>
+{{/each}}
