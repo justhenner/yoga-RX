@@ -23,10 +23,11 @@ nav {
     /* margin: 0 auto; */
     font: 500 100%/1.5 system-ui;
 }
-.header {
-        background-image: url("./images/background.png");
-        background-color: #cccccc;
-        font-size: 0%;
+html {
+    background-image: url("./images/backimg.png");
+    background-color: #cccccc;
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 .forms {
     /* display: inline-block; */
@@ -54,4 +55,7 @@ nav {
     float: right;
     margin: 50px 50px 50px 10px;
     max-width: 40%;
+}
+h1 {
+    text-align: center;
 }
