@@ -1,19 +1,21 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } =require('sequelize');
 const sequelize = require('../config/config');
 
-class Asana_Focus extends Model {}
 
-Asana_Focus.init(
+class Favorites extends Model {}
+
+
+
+Favorites.init (
     {
-
-        id:{
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
 
-        asana_id:{
+        asana_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'asana',
@@ -21,22 +23,23 @@ Asana_Focus.init(
                 unique: false
             }
         },
-
-        focus_id:{
-            type:DataTypes.INTEGER,
+        user_id: {
+            type: DataTypes.INTEGER,
             references: {
-                model: 'focus',
+                model: 'user',
                 key: 'id',
                 unique: false
-            },
-        }   
-    },
-    {
+    
+        }
+    }, 
+},
+    { 
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'asana',
-      }
+        modelName: 'favorites',
+
+    }
 );
-module.exports = Asana_Focus;
+module.exports = Favorites;

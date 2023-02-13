@@ -1,12 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/config');
 
-class Asana extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Asana extends Model {}
 
 Asana.init(
   {
@@ -14,30 +9,25 @@ Asana.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+    },
+    sanskrit_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     english_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    sanskrit_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-    description: {
+    difficulty_level: {
+      type: DataTypes.STRING,
       type: DataTypes.STRING,
       allowNull: false,
     },
-    difficulty_level: {
-      type: DataTypes.VARCHAR(30),
-      allowNull: false,
-    },
     img_url: {
-      type: DataTypes.LONGBLOB,
-      // or BLOB if it doesn't work
+      type: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    // image Model Attributes should be here
   },
   {
     sequelize,

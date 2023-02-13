@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Focus, Asana, User, User_Asana, Asana_Focus } = require('../../models');
+const { Focus, Asana, User, Favorites, Asana_Focus } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', async (req,res)=> {
     try{
-        const focusData = await Asana.findAll();
-        const focuses = focusData.map((focus) => focus.get({plain: true }));
+        const asanaData = await Asana.findAll();
+        const asanas = focusData.map((focus) => focus.get({plain: true }));
         res.status(200).json(focusData);
     } catch (err) {
         res.status(500).json(err);
@@ -14,11 +14,11 @@ router.get('/', async (req,res)=> {
 
 router.get('/:id', async (req,res)=> {
     try{
-        const focusData = await Focus.findByPk(req.params.id, {
+        const asanaData = await Asana.findByPk(req.params.id, {
             include: [{
-                model:Asana, 
+                model:Focus, 
                 through: Asana_Focus,
-                as: 'asanas_for_focus'
+                as: 'focuses_for_asana'
             }]
         });
 
@@ -33,3 +33,4 @@ router.get('/:id', async (req,res)=> {
         res.status(500).json(err);
     }
 });
+module.exports = router;
