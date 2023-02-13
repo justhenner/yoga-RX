@@ -5,19 +5,19 @@
         {{#each favorite as |favorite|}}
         <li>
             <article class="favorites">
-                <p class ="asana">
+                <p class="asana">
                     <span>{{favorites.name}}</span>
                 </p>
                 <div class="meta">
                     <strong>Chosen on{{format_date favorite.chosen_on}}</strong>
                 </div>
-                </article>
-                <a> href="/api/asana/{{asana.id}}" class="edit-link"> Edit-favorites<a>
+            </article>
+            <a href="/api/asana/{{asana.id}}" class="edit-link">Edit-favorites</a>
         </li>
         {{/each}}
-        </ul>
-    </section>
+    </ul>
+</section>
 
-    <div>
-        <button type="submit"><a href="dashboard/new-favorite" class="create btn">Add New Favorite<a>button>
-    </div>
+<div>
+    <button type="submit"><a href="dashboard/new-favorite" class="create btn">Add New Favorite<a>button>
+</div>
