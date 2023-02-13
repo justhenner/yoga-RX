@@ -1,0 +1,70 @@
+[
+    {   "id":1,
+        "name":"core strengthener",
+        "description": "Asanas that strengthen the core"
+    },
+    {   "id":2,
+        "name":"hip opener",
+        "description": "Asanas that open the hips"
+    },
+    {   "id":3,
+        "name":"hip flexor stretch",
+        "description": "Asanas that stretch the hip flexors"
+    },
+    {   "id":4,
+        "name":"hamstring stretch",
+        "description": "Asanas that stretch the hamstrings"
+    },
+    {   "id":5,
+        "name":"shoulder stretch",
+        "description": "Asanas that stretch the shoulders"
+    },
+    {   "id":6,
+        "name":"side body stretch",
+        "description": "Asanas that stretch the side body i.e. latisimus dorsi muscles"
+    },
+    {   "id":7,
+        "name":"neck stretch",
+        "description": "Asanas that stretch the neck"
+    },
+    {   "id":8,
+        "name":"foot and ankle stretch",
+        "description": "Asanas that stretch the feet and ankles"
+    },
+    {   "id":9,
+        "name":"low back stretch",
+        "description": "Asanas that stretch the low back"
+    },
+    {   "id":10,
+        "name":"upper body strengthener",
+        "description": "Asanas that strengthen the upper body"
+    },
+    {   "id":11,
+        "name":"hamstring strengthener",
+        "description": "Asanas that strengthen the hamstrings"
+    },
+    {   "id":12,
+        "name":"quad strengthener",
+        "description": "Asanas that strengthen the quads"
+    },
+    {   "id":13,
+        "name":"glute strengthener",
+        "description": "Asanas that strengthen the glutes"
+    },
+    {   "id":14,
+        "name":"low back strengthener",
+        "description":"Asanas that strengthen the low back"
+    },
+    {   "id":15,
+        "name":"standing balancing",
+        "description": "Asanas that require balancing one one leg"
+    },
+    {   "id":16,
+        "name":"strength inversion",
+        "description": "Asanas that strengthen the upper body while placing the hips over the heart"
+    },
+    {   "id":17,
+        "name":"inversion",
+        "description":"Asanas that invert the blood flow while placing the hips over the heart"
+    }
+]
