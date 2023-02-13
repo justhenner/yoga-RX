@@ -1,0 +1,862 @@
+[
+    {
+        "focus_id": "1",
+        "asana_id": "1"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "2"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "13"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "19"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "22"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "26"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "33"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "34"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "45"
+    },
+    {
+        "focus_id": "1",
+        "asana_id": "46"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "5"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "10"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "24"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "25"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "31"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "5"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "32"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "36"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "37"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "40"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "45"
+    },
+    {
+        "focus_id": "2",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "3"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "6"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "12"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "3"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "23"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "25"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "27"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "31"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "32"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "36"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "37"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "3"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "40"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "3",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "18"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "20"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "28"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "30"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "36"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "38"
+    },
+    {
+        "focus_id": "4",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "3"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "6"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "8"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "9"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "10"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "12"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "14"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "19"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "20"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "23"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "25"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "27"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "28"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "29"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "30"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "32"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "33"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "35"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "38"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "43"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "45"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "43"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "46"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "5",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "8"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "8"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "9"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "32"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "46"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "6",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "8"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "18"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "20"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "27"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "28"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "30"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "35"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "38"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "43"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "7",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "8"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "12"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "25"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "26"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "30"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "34"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "7"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "37"
+    },
+    {
+        "focus_id": "8",
+        "asana_id": "43"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "10"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "10"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "20"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "24"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "25"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "27"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "30"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "37"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "38"
+    },
+    {
+        "focus_id": "9",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "13"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "13"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "14"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "19"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "22"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "26"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "13"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "34"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "43"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "10",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "4"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "9"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "12"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "18"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "29"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "41"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "45"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "46"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "11",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "4"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "9"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "12"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "29"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "41"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "4"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "45"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "46"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "12",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "4"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "9"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "12"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "18"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "29"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "41"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "42"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "44"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "45"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "13",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "19"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "26"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "29"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "34"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "43"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "47"
+    },
+    {
+        "focus_id": "14",
+        "asana_id": "48"
+    },
+    {
+        "focus_id": "15",
+        "asana_id": "16"
+    },
+    {
+        "focus_id": "15",
+        "asana_id": "17"
+    },
+    {
+        "focus_id": "15",
+        "asana_id": "21"
+    },
+    {
+        "focus_id": "15",
+        "asana_id": "41"
+    },
+    {
+        "focus_id": "15",
+        "asana_id": "46"
+    },
+    {
+        "focus_id": "16",
+        "asana_id": "13"
+    },
+    {
+        "focus_id": "16",
+        "asana_id": "14"
+    },
+    {
+        "focus_id": "16",
+        "asana_id": "15"
+    },
+    {
+        "focus_id": "16",
+        "asana_id": "19"
+    },
+    {
+        "focus_id": "16",
+        "asana_id": "22"
+    },
+    {
+        "focus_id": "17",
+        "asana_id": "27"
+    },
+    {
+        "focus_id": "17",
+        "asana_id": "23"
+    }
+]
