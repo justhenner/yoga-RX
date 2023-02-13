@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" href="./stylesheets/style.css">
 
     <title>yoga rx</title>
 </head>
 
-<header class="header ">
+<header class="header">
 
     <img src="./images/logo.png" alt="yoga_man" style="">
     <a href="signIn.html" class="singIn">Sign in</a>
@@ -39,7 +39,7 @@
                     Focus
                 </a>
                 <div class="navbar-dropdown is-boxed">
-                    {{#each focus as |focus|}}
+                    {{#each focus as |focus| }}
                     <a class="navbar-item" href="/focus/{{focus.id}}">
                         {{focus.name}}
                     </a>
@@ -51,7 +51,7 @@
                     Asana
                 </a>
                 <div class="navbar-dropdown is-boxed">
-                    {{#each asana as |asana|}}
+                    {{#each asanas as |asana|}}
                     <a class="navbar-item" href="/asana/{{asana.id}}">
                         {{asana.english_name}}
                     </a>
