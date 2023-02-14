@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Focus, Asana, User, Favorites, Asana_Focus } = require('../../models');
-const withAuth = require('../../utils/auth');
+
 
 router.get('/', async (req,res)=> {
     try{
