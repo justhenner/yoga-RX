@@ -145,6 +145,7 @@ router.get('/signup', async (req, res) => {
 
 
 router.get('/user/:id', async (req, res) => {
+
   try {
     const asanaData = await Asana.findAll();
     const asanas = asanaData.map((asana) => asana.get({ plain: true }));
