@@ -92,7 +92,7 @@ router.get('/user/:id', async (req, res) => {
                     attributes: ['asana_id'],
                 },
             ],
-        }),
+        });
         const user = userData.get({ plain: true });
 
         res.render('dashboard', {
