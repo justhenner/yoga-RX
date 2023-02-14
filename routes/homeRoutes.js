@@ -111,6 +111,15 @@ console.log (focus)
   }
 });
 
+router.get('/signup', async (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup');
+});
+
 
 router.get('/user/:id', async (req, res) => {
   try {

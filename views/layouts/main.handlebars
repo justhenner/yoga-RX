@@ -14,7 +14,6 @@
     <header class="header ">
 
         <img src="./image/logo.png" alt="yoga_man" style="">
-        <a href="signIn.html" class="singIn">Sign in</a>
     </header>
     <!-- Navigation -->
     <nav class="navbar is-transparent">
@@ -31,7 +30,7 @@
 
         <div id="navbarExampleTransparentExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="/homeroutes">
+                <a class="navbar-item" href="/">
                     Home
                 </a>
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -53,7 +52,7 @@
                     <div class="navbar-dropdown is-boxed">
                         {{#each asanas as |asana|}}
                         <a class="navbar-item" href="/asana/{{asana.id}}">
-                            {{asana.english_name}}
+                            {{asana.english_name}}|{{asana.sanskirt_name}}
                         </a>
                         <!-- each loop -->
                         {{/each}}
@@ -73,7 +72,7 @@
                     <div class="field is-grouped">
                         {{#if loggedIn }}
                         <p class="control">
-                            <a class="bd-tw-button button" href="signinURL">
+                            <a class="bd-tw-button button" href="/signout">
                                 <span class="icon">
                                     <i class="fab fa-twitter"></i>
                                 </span>
@@ -88,12 +87,22 @@
                         </p>
                         {{else}}
                         <p class="control">
-                            <a class="bd-tw-button button" href="signinURL">
+                            <a class="bd-tw-button button" href="/login">
                                 <span class="icon">
                                     <i class="fab fa-twitter"></i>
                                 </span>
                                 <span>
                                     Login
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control pt-2">
+                            <a class="bd-tw-button button" href="/signup">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Sign Up
                                 </span>
                             </a>
                         </p>
