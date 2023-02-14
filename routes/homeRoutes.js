@@ -106,6 +106,9 @@ router.get('/focus/:id', async (req, res) => {
         {
           model: Asana,
           as: 'asanas_for_focus'
+          // where? focus_id @asanas_for_focus = this.id
+          // return asana_ids 
+          // for each asana_id findByPk(asana_id)
         },
       ],
     }
@@ -117,7 +120,7 @@ console.log (focus)
     res.render('search', {
       asanas,
       focuses,
-      ...focus,
+      searchData:focus,
     });
   } catch (err) {
     console.log(err);
