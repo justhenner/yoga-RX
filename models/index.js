@@ -1,6 +1,6 @@
 const User = require('./user');
 const Focus = require('./focus');
-const Asana = require('./user');
+const Asana = require('./asana');
 const Asana_Focus = require('./asana_focus');
 const Favorites = require('./favorites');
 
@@ -36,4 +36,4 @@ Asana.belongsToMany(User, {
     as:'asanas_for_user'
 });
 
-module.exports = {User, Asana, Focus, Asana_Focus, Favorites}
+module.exports = {User, Asana, Focus, Asana_Focus, Favorites }

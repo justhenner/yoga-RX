@@ -1,23 +1,23 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
+const sequelize = require('../config/connection');
 
 class Focus extends Model {}
+
 
 Focus.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-    
+      primaryKey: true
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
-    description: {
+    description: { 
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
   },
   {
@@ -25,7 +25,7 @@ Focus.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'focus',
+    modelName: 'focus'
   }
 );
 

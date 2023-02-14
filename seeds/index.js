@@ -1,23 +1,21 @@
-const sequelize = require('../config/config');
-const { Focus, Asana,Asana_Focus} = require('../models');
-const seedFocus = require('./focusSeed.js')
-const asanaSeedData = require('./asanaSeed.js')
-const seedAsanaFocus =require('./asana_focusSeed.js')
+const sequelize = require('../config/');
+const { Focus, Asana, Asana_Focus } = require('../models');
 
+const focusSeedData = require('./focusSeed.json');
+const asanaSeedData = require('./asanaSeed.json');
+const asana_focusSeedData = require('./asana_focusSeed.json')
 
 const seeddatabase = async ()=> {
     await sequelize.sync({force:true});
-    console.log('db linked');
-
-    await seedFocus()
-    console.log("----------focus seeded-----------");
-
-    await asanaSeedData("----------asana seeded-----");
-
-
-    await seedAsanaFocus("---------asanafocus seeded------");
+    
+    const focuses = await Focus.bulkCreate(focusSeedData);
+    console.log('finish seeding focus');
+    const asanas = await Asana.bulkCreate(asanaSeedData);
+    console.log('finish seeding focus');
+    const asana_focus = await Asana_Focus.bulkCreate(asana_focusSeedData);
+    console.log('finish seeding focus');
 
     process.exit(0)
-    
-}
+};
+
 seeddatabase()
