@@ -53,16 +53,7 @@ router.get('/asana/:id', async (req, res) => {
     const asanas = asanasData.map((asana) => asana.get({ plain: true }));
     const focusData = await Focus.findAll();
     const focuses = focusData.map((focus) => focus.get({ plain: true }));
-    const asanaData = await Asana.findByPk(req.params.id, {
-      include: [
-        {
-          model: Focus,
-          as: 'focuses_for_asana',
-          attributes: ['name']
-          
-        },
-      ],
-    }
+    const asanaData = await Asana.findByPk(req.params.id, {}
     );
 
     const asana = await asanaData.get({ plain: true });
@@ -70,7 +61,7 @@ router.get('/asana/:id', async (req, res) => {
     res.render('asana', {
       asanas,
       focuses,
-      ...asana
+      asana
     });
   } catch (err) {
     res.status(500).json(err);
