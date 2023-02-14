@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Focus, Asana, User, Favorites, Asana_Focus } = require('../models');
 const withAuth = require('../utils/auth');
 
+
 router.get('/', async (req, res) => {
   try {
     const asanaData = await Asana.findAll();
@@ -21,12 +22,15 @@ router.get('/', async (req, res) => {
 
 router.get('/asana', async (req, res) => {
   try {
+    const focusData = await Focus.findAll();
+    const focuses = focusData.map((focus) => focus.get({ plain: true }));
     const asanaData = Asana.findAll; (
       {
         include:[
           {
-            model: Asana_Focus,
-            attributes: ['focus_id']
+            model: Focus,
+            as: 'focuses_for_asana',
+            attributes: ['name']
           },
         ],
       }
@@ -35,7 +39,8 @@ router.get('/asana', async (req, res) => {
     const asanas = asanaData.map((asana) => asana.get({ plain: true }));
 
     res.render('allAsanas', {
-      ...asanas,
+      asanas,
+      focuses,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -44,11 +49,17 @@ router.get('/asana', async (req, res) => {
 
 router.get('/asana/:id', async (req, res) => {
   try {
+    const asanasData = await Asana.findAll();
+    const asanas = asanasData.map((asana) => asana.get({ plain: true }));
+    const focusData = await Focus.findAll();
+    const focuses = focusData.map((focus) => focus.get({ plain: true }));
     const asanaData = await Asana.findByPk(req.params.id, {
       include: [
         {
-          model: Asana_Focus,
-          attributes: ['focus_id']
+          model: Focus,
+          as: 'focuses_for_asana',
+          attributes: ['name']
+          
         },
       ],
     }
@@ -57,7 +68,9 @@ router.get('/asana/:id', async (req, res) => {
     const asana = await asanaData.get({ plain: true });
 
     res.render('asana', {
-      ...asana,
+      asanas,
+      focuses,
+      ...asana
     });
   } catch (err) {
     res.status(500).json(err);
@@ -66,12 +79,15 @@ router.get('/asana/:id', async (req, res) => {
 
 router.get('/focus', async (req, res) => {
   try {
+    const asanaData = await Asana.findAll();
+    const asanas = asanaData.map((asana) => asana.get({ plain: true }));
     const focusData = focus.findAll; (
       {
         include:[
           {
-            model: Asana_Focus,
-            attributes: ['asana_id']
+            model: Asana,
+            as: 'asanas_for_focus',
+            attributes: ['english_name']
           },
         ],
       }
@@ -80,6 +96,7 @@ router.get('/focus', async (req, res) => {
     const focuses = focusData.map((focus) => focus.get({ plain: true }));
 
     res.render('allfocuses', {
+      asanas,
       ...focuses,
     });
   } catch (err) {
@@ -89,6 +106,10 @@ router.get('/focus', async (req, res) => {
 
 router.get('/focus/:id', async (req, res) => {
   try {
+    const asanaData = await Asana.findAll();
+    const asanas = asanaData.map((asana) => asana.get({ plain: true }));
+    const focusesData = await Focus.findAll();
+    const focuses = focusesData.map((focus) => focus.get({ plain: true }));
     const focusData = await Focus.findByPk(req.params.id, {
       include: [
         {
@@ -103,6 +124,8 @@ console.log(focusData)
     const focus = focusData.get({ plain: true });
 console.log (focus)
     res.render('search', {
+      asanas,
+      focuses,
       ...focus,
     });
   } catch (err) {
@@ -123,6 +146,10 @@ router.get('/signup', async (req, res) => {
 
 router.get('/user/:id', async (req, res) => {
   try {
+    const asanaData = await Asana.findAll();
+    const asanas = asanaData.map((asana) => asana.get({ plain: true }));
+    const focusData = await Focus.findAll();
+    const focuses = focusData.map((focus) => focus.get({ plain: true }));
     const userData = await User.findByPk(req.params.id, {
       include: [
         {
@@ -135,6 +162,8 @@ router.get('/user/:id', async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render('dashboard', {
+      asanas,
+      focuses,
       ...user,
       logged_in: req.session.logged_in
     });
@@ -146,6 +175,10 @@ router.get('/user/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
+    const asanaData = await Asana.findAll();
+    const asanas = asanaData.map((asana) => asana.get({ plain: true }));
+    const focusData = await Focus.findAll();
+    const focuses = focusData.map((focus) => focus.get({ plain: true }));
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
@@ -156,6 +189,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     res.render('dashboard', {
       ...user,
+      asanas,
+      focuses,
       logged_in: true
     });
   } catch (err) {
@@ -163,14 +198,21 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get('/login', async (req, res) => {
+  const asanaData = await Asana.findAll();
+    const asanas = asanaData.map((asana) => asana.get({ plain: true }));
+    const focusData = await Focus.findAll();
+    const focuses = focusData.map((focus) => focus.get({ plain: true }));
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/dashboard');
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    asanas,
+    focuses,
+  });
 });
 
 module.exports = router;
