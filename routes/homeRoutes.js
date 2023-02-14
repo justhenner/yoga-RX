@@ -92,19 +92,21 @@ router.get('/focus/:id', async (req, res) => {
     const focusData = await Focus.findByPk(req.params.id, {
       include: [
         {
-          model: Asana_Focus,
-          attributes: ['asana_id']
+          model: Asana,
+          as: 'asanas_for_focus'
         },
       ],
     }
     );
-
-    const focus = await focusData.get({ plain: true });
-
+    console.log(req.params.id)
+console.log(focusData)
+    const focus = focusData.get({ plain: true });
+console.log (focus)
     res.render('search', {
       ...focus,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -116,7 +118,7 @@ router.get('/user/:id', async (req, res) => {
       include: [
         {
           model: Favorites,
-          attributes: ['asana_id'],
+          as: 'asanas_for_user'
         },
       ],
     });

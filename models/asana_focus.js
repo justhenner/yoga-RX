@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
+const sequelize = require('../config/connection');
 
 class Asana_Focus extends Model {}
 
@@ -36,7 +36,7 @@ Asana_Focus.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'asana',
+        modelName: 'asana_focus',
       }
 );
 module.exports = Asana_Focus;

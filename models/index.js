@@ -24,14 +24,12 @@ Focus.belongsToMany(Asana, {
 User.belongsToMany(Asana, {
     through:{
         model: Favorites,
-        model: Favorites,
         unique: false
     },
     as:'users_for_asana'
 });
 Asana.belongsToMany(User, {
     through:{
-        model: Favorites,
         model: Favorites,
         unique: false
     },
