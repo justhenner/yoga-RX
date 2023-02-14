@@ -1,4 +1,4 @@
-const sequelize = require('../config/');
+const sequelize = require('../config/connection.js');
 const { Focus, Asana, Asana_Focus } = require('../models');
 
 const focusSeedData = require('./focusSeed.json');
