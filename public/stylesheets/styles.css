@@ -18,16 +18,15 @@ nav {
     grid-template-columns: 300px 1fr;
     gap: 1rem;
     /* align-items: left; */
-    justify-content: center;
+    text-align: center;
     /* max-width: 800px; */
     /* margin: 0 auto; */
     font: 500 100%/1.5 system-ui;
 }
-html {
-    background-image: url("./images/backimg.png");
-    background-color: #cccccc;
-    background-size: cover; 
-    background-repeat: no-repeat;
+.header {
+        background-image: url("../image/background.png");
+        background-color: #cccccc;
+        font-size: 0%;
 }
 .forms {
     /* display: inline-block; */
@@ -52,14 +51,17 @@ html {
 }
 .asanaInfo {
     display: inline;
-    float: right;
-    margin: 50px 50px 50px 10px;
+    float: left;
+    margin: 50px 50px 50px 50px;
     max-width: 40%;
 }
-h1 {
+#favHeader {
+    display: block;
     text-align: center;
+    /* margin: auto; */
 }
-.header {
-height: 260px;
-width: 160px;
+.boxes{
+    font-size: larger;
+    text-align: left;
+    margin: 50px;
 }
