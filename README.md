@@ -24,15 +24,45 @@ Create a Full Stack Web Application with the following features:
 
 **User stories**
 
-1. As a yogi I want a drop-down SEARCH FEATURE that displays focus areas of the body 
-so that I can click on an area and view relevant asanas;
+1. 
 
-2. As a yogi I want a drop-down search feature that displays asanas
-so that I can view a list of all asanas;
-3. As a yogi I want to click an asana from the asana list
-so that I can view specific details of an asana on a click;
-4. As a yogi I want to save my favorite asanas so that 
-after logging in I can easily access favorites before a practice
+### As 
+
+a yogi I want a drop-down SEARCH FEATURE that displays focus areas of the body 
+
+### So 
+that I can click on an area and view relevant asanas;
+
+ ![image info](./assets/images/user1.png)
+2. 
+
+### As
+
+a yogi I want a drop-down search feature that displays asanas
+
+### So
+
+that I can view a list of all asanas;
+
+3. 
+
+### As 
+
+a yogi I want to click an asana from the asana list
+
+### So 
+
+that I can view specific details of an asana on a click;
+
+4. 
+
+### As 
+
+a yogi I want to save my favorite asanas 
+
+### so 
+
+that after logging in I can easily access favorites before a practice
 
 ![Alt text](./assets/images/
 
