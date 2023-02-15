@@ -32,13 +32,11 @@ Create a Full Stack Web Application with the following features:
 
 ![image info](./assets/images/user2.png)
 
-3. 
-
-As a yogi I want to click an asana from the asana list so that I can view specific details of an asana on a click;
+### 3. As a yogi I want to click an asana from the asana list so that I can view specific details of an asana on a click;
 
 ![image info](./assets/images/user3.png)
 
-4. As a yogi I want to save my favorite asanas so that after logging in I can easily access favorites before a practice;
+### 4. As a yogi I want to save my favorite asanas so that after logging in I can easily access favorites before a practice;
 
 ![image info](./assets/images/user4.png)
 
