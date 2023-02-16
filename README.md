@@ -43,7 +43,7 @@ Create a Full Stack Web Application with the following features:
 ## Installation and Usage
 
 The project was uploaded to [GitHub](https://github.com/) at the following repository:
-[https://github.com/jorguzman100/project2](https://github.com/justhenner/yoga-RX)
+[https://github.com/justhenner/yoga-RX](https://github.com/justhenner/yoga-RX)
 
 You can access the deployed application with the Heroku link:
 http://yoga-rx.herokuapp.com
